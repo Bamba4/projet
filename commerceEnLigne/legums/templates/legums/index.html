@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vegefoods - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'legums/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'legums/css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'legums/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'legums/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'legums/css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'legums/css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'legums/css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'legums/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'legums/css/jquery.timepicker.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'legums/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'leguùs/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'legums/css/style.css' %}">
+  </head>
+  <body class="goto-here">
+		{% include 'legums/header.html' %}
+    <section id="home-section" class="hero">
+        <div class="home-slider owl-carousel">
+          <div class="slider-item" style="background-image: url({% static 'legums/images/bg_1.jpg' %});">
+            <div class="overlay"></div>
+            <div class="container">
+              <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+                <div class="col-md-12 ftco-animate text-center">
+                  <h1 class="mb-2">We serve Fresh Vegestables &amp; Fruits</h1>
+                  <h2 class="subheading mb-4">We deliver organic vegetables &amp; fruits</h2>
+                  <p><a href="#" class="btn btn-primary">View Details</a></p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-item" style="background-image: url({% static 'legums/images/bg_2.jpg' %} );">
+            <div class="overlay"></div>
+            <div class="container">
+              <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+                <div class="col-sm-12 ftco-animate text-center">
+                  <h1 class="mb-2">100% Fresh &amp; Organic Foods</h1>
+                  <h2 class="subheading mb-4">We deliver organic vegetables &amp; fruits</h2>
+                  <p><a href="#" class="btn btn-primary">View Details</a></p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+		{% include 'legums/nav.html' %}
+    <!-- END nav -->
+
+    {% block content  %}{% endblock %}
+    {% include 'legums/footer.html' %}
+
+
+  <script src="{% static 'legums/js/jquery.min.js' %}"></script>
+  <script src="{% static 'legums/js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'legums/js/popper.min.js' %}"></script>
+  <script src="{% static 'legums/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'legums/js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'legums/js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'legums/js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'legums/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'legums/js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'legums/js/aos.js' %}"></script>
+  <script src="{% static 'legums/js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'legums/js/bootstrap-datepicker.js' %}"></script>
+  <script src="{% static 'legums/js/scrollax.min.js'%}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static 'legums/js/google-map.js' %}"></script>
+  <script src="{% static 'legums/js/main.js' %}"></script>
+  <script>
+   $(document).ready(function(){
+
+   var quantitiy=0;
+      $('.quantity-right-plus').click(function(e){
+
+           // Stop acting like a button
+           e.preventDefault();
+           // Get the field name
+           var quantity = parseInt($('#quantity').val());
+
+           // If is not undefined
+
+               $('#quantity').val(quantity + 1);
+
+
+               // Increment
+
+       });
+
+        $('.quantity-left-minus').click(function(e){
+           // Stop acting like a button
+           e.preventDefault();
+           // Get the field name
+           var quantity = parseInt($('#quantity').val());
+
+           // If is not undefined
+
+               // Increment
+               if(quantity>0){
+               $('#quantity').val(quantity - 1);
+               }
+       });
+
+   });
+ </script>
+  </body>
+</html>

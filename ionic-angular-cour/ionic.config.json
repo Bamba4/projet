@@ -1,0 +1,8 @@
+{
+  "name": "ionic-angular-cour",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

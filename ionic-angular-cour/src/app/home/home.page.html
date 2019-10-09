@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+        Animaux
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+ <ion-grid>
+   <ion-row>
+     <ion-col size-md="6" offset-md="3">
+        <ion-card>
+          </ion-card>
+          <ion-card>
+            <ion-card-content>
+              <ion-list>
+               <app-recipies-item *ngFor="let c of recipies" [recipieItem]="c"></app-recipies-item>
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+     </ion-col>
+   </ion-row>
+ </ion-grid>
+</ion-content>
